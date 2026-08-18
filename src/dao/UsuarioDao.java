@@ -17,7 +17,7 @@ public class UsuarioDao {
     }
     
        public void adicionar(UsuarioModel usuario) {
-        String sql = "INSERT INTO usuário(nome,cpf,email,telefone,nascimento)VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO jogo (nome,plataforma,preco VALUES(?,?,?,?,?)";
         
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
@@ -90,7 +90,7 @@ public class UsuarioDao {
     }
     
                 public void atualizar(UsuarioModel usuario) {
-        String sql = "UPDATE jogo SET nome = ?, plataforma = ?, preco ?";
+        String sql = "UPDATE jogo SET nome = ?, plataforma = ?, preco ? WHERE idJogo";
         
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
